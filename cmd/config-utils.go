@@ -18,7 +18,7 @@ package cmd
 
 import "strings"
 
-var validAPIs = []string{"S3v4", "S3v2", "iam"}
+var validAPIs = []string{"S3v4", "S3v2", "IAM"}
 
 const (
 	accessKeyMinLen = 5
@@ -57,7 +57,7 @@ func isValidHostURL(hostURL string) (ok bool) {
 // isValidAPI - Validates if API signature string of supported type.
 func isValidAPI(api string) (ok bool) {
 	switch strings.ToLower(api) {
-	case "s3v2", "s3v4":
+	case "s3v2", "s3v4", "iam":
 		ok = true
 	}
 	return ok
