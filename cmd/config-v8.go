@@ -79,7 +79,7 @@ func (c *configV8) loadDefaults() {
 		URL:       "https://s3.amazonaws.com",
 		AccessKey: defaultAccessKey,
 		SecretKey: defaultSecretKey,
-		API:       "S3v4",
+		API:       "iam",
 	})
 
 	// Google cloud storage service.
