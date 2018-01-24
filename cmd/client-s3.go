@@ -119,6 +119,9 @@ func newFactory() func(config *Config) (Client, *probe.Error) {
 			if strings.ToUpper(config.Signature) == "S3V2" {
 				creds = credentials.NewStaticV2(config.AccessKey, config.SecretKey, "")
 			}
+			if strings.ToUpper(config.Signature) == "IAM" {
+				creds = credentials.NewIAM("")
+			}
 			// Not found. Instantiate a new minio
 			var e error
 			api, e = minio.NewWithCredentials(hostName, creds, useTLS, "")

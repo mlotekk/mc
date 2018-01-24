@@ -18,7 +18,7 @@ package cmd
 
 import "strings"
 
-var validAPIs = []string{"S3v4", "S3v2"}
+var validAPIs = []string{"S3v4", "S3v2", "iam"}
 
 const (
 	accessKeyMinLen = 5
